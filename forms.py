@@ -25,7 +25,7 @@ class RegisterForm(Form):
                 r'^[a-zA-Z0-9_]+$',
                 message="Username should be one word consisting of"
                         "letters, numbers, and underscores."
-            )
+            ),
             name_exists
         ]
     )
