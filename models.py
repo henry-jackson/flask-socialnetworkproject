@@ -41,7 +41,7 @@ class User(UserMixin, Model):
 class Post(Model):
     timestamp = DateTimeField(default=datetime.datetime.now)
     user = ForeignKeyField(
-        User,
+        model=User,
         backref='posts'
     )
     content = TextField()
@@ -52,5 +52,5 @@ class Post(Model):
 
 def initialize():
     DATABASE.connect()
-    DATABASE.create_tables([User], safe=True)
+    DATABASE.create_tables([User, Post], safe=True)
     DATABASE.close()
