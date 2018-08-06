@@ -1,7 +1,6 @@
 import datetime
 
 from flask_login import UserMixin
-from flask_bcrypt import generate_password_hash, check_password_hash
 from peewee import *
 
 DATABASE = SqliteDatabase('social.db')
