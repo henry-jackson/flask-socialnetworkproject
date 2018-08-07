@@ -1,9 +1,10 @@
 import datetime
 
+from flask_bcrypt import generate_password_hash
 from flask_login import UserMixin
 from peewee import *
 
-DATABASE = SqliteDatabase('social.db')
+DATABASE = SqliteDatabase('twocans.db')
 
 # Model going second means the class is ultimately a Model
 class User(UserMixin, Model):
@@ -31,7 +32,7 @@ class User(UserMixin, Model):
             cls.create(
                 username=username,
                 email=email,
-                password=password,
+                password=generate_password_hash(password),
                 is_admin=admin,
             )
         except IntegrityError:

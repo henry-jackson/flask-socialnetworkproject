@@ -3,6 +3,7 @@
   <component name="dataSourceStorageLocal">
     <data-source name="social" uuid="55d50d8a-58b0-4617-b756-8df315b5b238">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="SQLITE" exact-version="0.0" />
+      <introspection-schemas>*:</introspection-schemas>
     </data-source>
   </component>
 </project>
