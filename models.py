@@ -75,8 +75,8 @@ class Post(Model):
 
 
 class Relationship(Model):
-    from_user = ForeignKeyField(User, related_name='relationships')
-    to_user = ForeignKeyField(User, related_name='related_to')
+    from_user = ForeignKeyField(User, backref='relationships')
+    to_user = ForeignKeyField(User, backref='related_to')
 
     class Meta:
         database = DATABASE

@@ -66,5 +66,6 @@ class LoginForm(Form):
         ]
     )
 
+
 class PostForm(Form):
     content = TextAreaField("What's up?", validators=[DataRequired()])
