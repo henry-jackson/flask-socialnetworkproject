@@ -9,4 +9,3 @@ Currently users can post and follow/unfollow each other, register, login and log
 - Add commenting ability for users
 - Add profile pictures
 - Customize css more
-- Deploy online
